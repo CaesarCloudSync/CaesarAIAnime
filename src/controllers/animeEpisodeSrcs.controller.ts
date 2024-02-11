@@ -37,7 +37,7 @@ const getAnimeEpisodeSources: RequestHandler<
     let malID: MalID;
     let anilistID: AnilistID;
     const animeURL = new URL(episodeId?.split("?ep=")[0], SRC_BASE_URL)?.href;
-
+    console.log(animeURL)
     const [episodeSrcData, animeSrc] = await Promise.all([
       scrapeAnimeEpisodeSources(episodeId, server, category),
       axios.get(animeURL, {
