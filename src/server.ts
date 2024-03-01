@@ -33,10 +33,10 @@ if (!Boolean(process?.env?.IS_VERCEL_DEPLOYMENT)) {
 
   // don't sleep
   // remove the setInterval below for personal deployments
-  setInterval(() => {
+  /*setInterval(() => {
     console.log("HEALTHCHECK ;)", new Date().toLocaleString());
     https.get("https://amarianime-qqbn26mgpa-uc.a.run.app/health");
-  }, 540000);
+  }, 540000);*/
 }
 
 export default app;
